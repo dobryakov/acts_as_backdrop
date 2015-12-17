@@ -5,7 +5,7 @@ require "backdrop/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "backdrop"
+  s.name        = "act_as_backdrop"
   s.version     = Backdrop::VERSION
   s.authors     = ["Grigoriy Dobryakov"]
   s.email       = ["grigoriydobryakov@gmail.com"]
