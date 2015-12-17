@@ -4,10 +4,10 @@ require 'test_helper'
 class ActAsBackdropTest < ActiveSupport::TestCase
 
   def test_model_act_as_backdrop
-    model = Something.new
+    model = Something.new(:title => 'abc')
     model.save
-    assert_equal 'suxxess', model.title
-    assert model.persisted?
+    model.title = 'def'
+    model.save
   end
 
 end
