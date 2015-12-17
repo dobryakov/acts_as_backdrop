@@ -3,6 +3,8 @@ acts_as_backdrop
 
 This gem allows you to write async processing code to your models right into your models code.
 
+[![Gem Version](https://badge.fury.io/rb/act_as_backdrop.svg)](https://badge.fury.io/rb/act_as_backdrop)
+
 Example
 -------
 
