@@ -15,7 +15,6 @@ module Backdrop
 
     module LocalInstanceMethods
       def acts_as_backdrop(options = {})
-        #self.title = self.previous_changes
         changes = self.previous_changes
         Backdrop::Event.publish model: self, changes: changes
       end
