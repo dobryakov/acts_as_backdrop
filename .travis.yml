@@ -13,4 +13,5 @@ script:
   - cp pkg/*.gem test/dummy/ && cd test/dummy && gem install act_as_backdrop && cd -
   - cd test/dummy && bundle install && cd -
   - cd test/dummy && rake db:migrate RAILS_ENV=test && cd -
+  - cd test/dummy && rake test && cd -
   - rake test

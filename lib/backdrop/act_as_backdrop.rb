@@ -3,14 +3,10 @@ module Backdrop
 
     extend ActiveSupport::Concern
 
-    included do
-      require 'backdrop'
-      after_save :acts_as_backdrop
-    end
-
     module ClassMethods
       def acts_as_backdrop(options = {})
         include Backdrop::ActAsBackdrop::LocalInstanceMethods
+        after_save :acts_as_backdrop
       end
     end
 
