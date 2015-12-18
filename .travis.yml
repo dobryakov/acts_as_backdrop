@@ -9,5 +9,5 @@ cache: bundler
 rvm:
   - 2.2.0
 script:
-  - bin/rake db:migrate RAILS_ENV=test
+  - rake db:migrate RAILS_ENV=test
   - rake test
