@@ -20,7 +20,7 @@ class Something < ActiveRecord::Base
     if message['changes'].present? && message['changes']['title'].present?
       old_title = message['changes']['title'].first
       new_title = message['changes']['title'].last
-      self.update(:check => new_title)
+      File.write('check.txt', new_title)
     end
 
   end

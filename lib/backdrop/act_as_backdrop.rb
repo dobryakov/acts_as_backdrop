@@ -6,7 +6,8 @@ module Backdrop
     module ClassMethods
       def acts_as_backdrop(options = {})
         include Backdrop::ActAsBackdrop::LocalInstanceMethods
-        after_save :acts_as_backdrop
+        #after_save :acts_as_backdrop
+        after_commit :acts_as_backdrop, on: [:create, :update]
       end
     end
 
