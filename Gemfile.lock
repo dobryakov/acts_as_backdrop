@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    backdrop (0.0.1)
+    act_as_backdrop (0.0.1)
       rails (~> 4.2.1)
 
 GEM
@@ -104,5 +104,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  backdrop!
+  act_as_backdrop!
   sqlite3
