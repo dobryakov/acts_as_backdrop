@@ -5,6 +5,7 @@ This gem allows you to write async processing code to your models right into you
 
 [![Build Status](https://travis-ci.org/dobryakov/acts_as_backdrop.svg)](https://travis-ci.org/dobryakov/acts_as_backdrop)
 [![Gem Version](https://badge.fury.io/rb/act_as_backdrop.svg)](https://badge.fury.io/rb/act_as_backdrop)
+[![Downloads](http://ruby-gem-downloads-badge.herokuapp.com/act_as_backdrop?type=total)]
 
 Example
 -------
@@ -45,7 +46,12 @@ Installation
 How it works
 ------------
 
-When your model instance saved (on after_save callback), the model itself and it's changes published to async job queue as usual DelayedJob.
+When your model instance saved (on after_commit callback), the model itself and it's changes published to async job queue as usual DelayedJob.
 The special worker (BackdropJob class) will process this message and will trigger your 'backdrop_process' method inside your model.
 
 You receive full information about model changes, and can process it as you wish. If you change the model state at this step, the next async task will happen and be processed in same way.
+
+History
+-------
+
+0.0.4: changed from 'after_save' to 'after_commit'.
