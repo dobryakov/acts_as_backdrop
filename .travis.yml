@@ -9,8 +9,8 @@ before_script:
 rvm:
   - 2.2.0
 script:
-  - rake install
   - bundle clean --force
+  - rake install
   - cd test/dummy && bundle clean --force && cd -
 #  - cp pkg/*.gem test/dummy/ && cd test/dummy && gem install act_as_backdrop && cd -
   - cd test/dummy && bundle install && cd -
