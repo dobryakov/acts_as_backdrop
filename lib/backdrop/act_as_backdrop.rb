@@ -4,6 +4,7 @@ module Backdrop
     extend ActiveSupport::Concern
 
     included do
+      require 'backdrop'
       after_save :acts_as_backdrop
     end
 
