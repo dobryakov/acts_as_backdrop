@@ -14,13 +14,18 @@ Example
 
       def backdrop_process(message)
 
-        # example that you receive:
-        # { "class"=>"Something",
-        #   "gid"=>"gid://dummy/Something/1",
-        #   "changes"=>{"title"=>[nil, "abc"],
-        #   "created_at"=>[nil, "2015-12-17T20:28:52.307Z"],
-        #   "updated_at"=>[nil, "2015-12-17T20:28:52.307Z"],
-        #   "id"=>[nil, 1]} }
+        # This will be processed asyncronously after model save.
+        # Example that you receive as 'message' variable:
+        #
+        # { "class"   => "Something",
+        #   "gid"     => "gid://dummy/Something/1",
+        #   "changes" => {
+        #     "title"      => [nil, "abc"],
+        #     "created_at" => [nil, "2015-12-17T20:28:52.307Z"],
+        #     "updated_at" => [nil, "2015-12-17T20:28:52.307Z"],
+        #     "id"         => [nil, 1]
+        #   }
+        # }
 
       end
 
@@ -31,10 +36,16 @@ Why
 
 Because you might need to process some data *after* the model is saved, asynchronously.
 
+Installation
+------------
+
+    gem 'act_as_backdrop' # Gemfile
+    require 'backdrop'    # application.rb
+
 How it works
 ------------
 
 When your model instance saved (on after_save callback), the model itself and it's changes published to async job queue as usual DelayedJob.
 The special worker (BackdropJob class) will process this message and will trigger your 'backdrop_process' method inside your model.
 
-You receive full information about model changes, and can process it as you wish.
+You receive full information about model changes, and can process it as you wish. If you change the model state at this step, the next async task will happen and be processed in same way.
