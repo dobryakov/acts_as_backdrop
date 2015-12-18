@@ -5,7 +5,7 @@ This gem allows you to write async processing code to your models right into you
 
 [![Build Status](https://travis-ci.org/dobryakov/acts_as_backdrop.svg)](https://travis-ci.org/dobryakov/acts_as_backdrop)
 [![Gem Version](https://badge.fury.io/rb/act_as_backdrop.svg)](https://badge.fury.io/rb/act_as_backdrop)
-[![Downloads](http://ruby-gem-downloads-badge.herokuapp.com/act_as_backdrop?type=total)]
+![](http://ruby-gem-downloads-badge.herokuapp.com/act_as_backdrop?type=total)
 
 Example
 -------
