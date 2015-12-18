@@ -105,4 +105,5 @@ PLATFORMS
 
 DEPENDENCIES
   act_as_backdrop!
+  rake
   sqlite3
