@@ -10,6 +10,6 @@ rvm:
   - 2.2.0
 script:
   - rake install
-  - cp pkg/*.gem test/dummy/ && cd test/dummy && gem install act_as_backdrop
-  - cd test/dummy && rake db:migrate RAILS_ENV=test
+  - cp pkg/*.gem test/dummy/ && cd test/dummy && gem install act_as_backdrop && cd -
+  - cd test/dummy && rake db:migrate RAILS_ENV=test && cd -
   - rake test
