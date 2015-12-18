@@ -9,7 +9,7 @@ cache: bundler
 rvm:
   - 2.2.0
 script:
-  - gem install
+  - rake install
   - cp pkg/*.gem test/dummy/ && cd test/dummy && gem install act_as_backdrop
   - cd test/dummy && rake db:migrate RAILS_ENV=test
   - rake test
