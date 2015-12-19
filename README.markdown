@@ -17,10 +17,11 @@ Example
 
       def backdrop_process(message)
 
-        # This will be processed asyncronously after model save.
-        # Here you receive all info about model changes, and may process it as you wish:
+        # This method will be processed asyncronously after model save.
+        # You receive complete info about model changes, and may process it as you wish:
         #
-        # { "class"   => "Something",
+        # {
+        #   "class"   => "Something",
         #   "gid"     => "gid://dummy/Something/1",
         #   "changes" => {
         #     "title"       => ["old title", "new title"],
