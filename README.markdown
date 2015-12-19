@@ -18,15 +18,13 @@ Example
       def backdrop_process(message)
 
         # This will be processed asyncronously after model save.
-        # Example that you receive as 'message' variable:
+        # Here you receive all info about model changes, and may process it as you wish:
         #
         # { "class"   => "Something",
         #   "gid"     => "gid://dummy/Something/1",
         #   "changes" => {
-        #     "title"      => [nil, "abc"],
-        #     "created_at" => [nil, "2015-12-17T20:28:52.307Z"],
-        #     "updated_at" => [nil, "2015-12-17T20:28:52.307Z"],
-        #     "id"         => [nil, 1]
+        #     "title"       => ["old title", "new title"],
+        #     "description" => [nil, "very long description"]
         #   }
         # }
 
