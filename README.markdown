@@ -12,7 +12,6 @@ This gem allows you to write async processing code to your models right into you
 Example
 -------
 
-    ```ruby
     class Something < ActiveRecord::Base
       acts_as_backdrop
 
